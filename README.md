@@ -51,5 +51,5 @@ Create a demo Controller
         }
     }
 
-Now,congratulations. You web-application will automatically register resource and scope on every startup . if you change
-the value of @AuthzScope or @AuthzResource, it will update them on next startup.
+Now,congratulations. Your web application will automatically register resource and scope to keycloak on every startup . if you change
+the value of @AuthzScope or @AuthzResource,no worry , it will update all of them you changed to keycloak on next startup.
