@@ -19,7 +19,7 @@ public class AuthzConfig {
      * @param authUrl Authentication url ,see it in application.properties
      * @param clientId ClientId ,It named resource in application.properties
      * @param credentials The secret of client
-     * @return
+     * @return AuthClient
      */
     @Bean
     public AuthzClient authzClient(@Value("${keycloak.realm}") String realm,

@@ -29,7 +29,7 @@ public class AuthzRegister implements ApplicationContextAware {
     /**
      *
      * @param applicationContext Spring application context that contains all of beans you write.
-     * @throws BeansException
+     * @throws BeansException if can not find the beans , this exception will occur
      */
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
