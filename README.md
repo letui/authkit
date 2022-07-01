@@ -17,9 +17,12 @@ Then you should create a spring-boot project with configuration file like under.
     keycloak.resource=app
     keycloak.bearer-only=false
     keycloak.credentials.secret=MCmBTtry9NEfeDJ5fa97srbXw45qNYVm
+    keycloak.use-resource-role-mappings=false
     keycloak.securityConstraints[0].authRoles[0]=default-roles-authkit
     keycloak.securityConstraints[0].securityCollections[0].name=protected
     keycloak.securityConstraints[0].securityCollections[0].patterns[0]=/*
+    keycloak.policy-enforcer-config.lazy-load-paths=true
+    keycloak.policy-enforcer-config.on-deny-redirect-to=/accessDenied
 
 The application.properties file for SpringBoot like above , make sure the realm/resource/secret... is setting ok on keycloak server
 
