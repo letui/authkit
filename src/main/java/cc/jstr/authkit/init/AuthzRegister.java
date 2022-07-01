@@ -20,9 +20,17 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * 自动注册类，Spring加载后负责将所有标识了AuthEntry的类扫描并注册到Keycloak的授权中心里
+ */
 @Configuration
 public class AuthzRegister implements ApplicationContextAware {
 
+    /**
+     *
+     * @param applicationContext Spring application context that contains all of beans you write.
+     * @throws BeansException
+     */
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         AuthzClient authzClient = applicationContext.getBean(AuthzClient.class);
